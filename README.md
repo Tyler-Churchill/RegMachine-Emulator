@@ -8,6 +8,8 @@ This program emulates a register machine which enables you to write programs ins
 
 ## How to install/run
 
+(compiled jar will be available once project is feature complete)
+
 1. Install JDK/JRE
 2. Open project files in your favourite java IDE/dev environment
 3. Build and run the project to begin programming inside the emulator
@@ -27,4 +29,19 @@ Type RUN on a new line to run the program
 3     HALT
 4     RUN
 
+```
+###The machine will display its states as it runs the given program
+
+```
+|   Reg1    |    Reg2   |
+|-----------------------|
+|     4     |     1     |
+|     3     |     1     |
+|     3     |     2     |
+|     2     |     2     |
+|     2     |     3     |
+|     1     |     3     |
+|     1     |     4     |
+|     0     |     4     |
+|     0     |     5     |
 ```
