@@ -4,7 +4,7 @@
 
 ## About
 
-This program emulates a register machine which enables you to write programs inside the emulated computer environment.
+This program emulates a register machine which enables you to write programs inside an emulated computer environment.
 
 ## How to Install/Run
 
