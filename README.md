@@ -16,17 +16,17 @@ This program emulates a register machine which enables you to write programs ins
 
 ## Currently Supported Commands
 
-###Halt: Stops the program
+###**Halt**: Stops the program
 ```
 HALT  
 ```
 
-###INC: increments the contents of register r, and moves to instruction number n
+###**INC**: increments the contents of register r, and moves to instruction number n
 ```
 INC r n
 ```
 
-###DEB: If value r is > 0, decrement register r and move to instruction number n, else move to 
+###**DEB**: If value r is > 0, decrement register r and move to instruction number n, else move to 
 instruction number x
 
 ```
