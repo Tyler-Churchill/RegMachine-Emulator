@@ -26,8 +26,7 @@ HALT
 INC r n
 ```
 
-###**DEB**: If value r is > 0, decrement register r and move to instruction number n, else move to 
-instruction number x
+###**DEB**: If value r is > 0, decrement register r and move to instruction number n, else move to instruction number x
 
 ```
 DEB r n x
