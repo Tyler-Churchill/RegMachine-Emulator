@@ -36,6 +36,13 @@ public abstract class Command implements Comparable<Command> {
 		this.setR2(0);
 	}
 	
+	public Command(int j, int r, int j1, int j2) {
+		this.j = j;
+		this.setR1(r);
+		this.setJr1(j1);
+		this.setJr2(j2);
+	}
+
 	public int getLineNum() {
 		return this.j;
 	}

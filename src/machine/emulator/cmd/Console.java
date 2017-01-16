@@ -30,6 +30,10 @@ public class Console {
 						HALT h = new HALT(l);
 						cmds.add(h);
 						break;
+					case DEB:
+						DEB d = new DEB(l, s.nextInt(), s.nextInt(), s.nextInt());
+						cmds.add(d);
+						break;
 					default:
 						throw new InvalidCommand("You have entered an invalid command, type " + "HELP" + " for commands");
 					}
