@@ -5,6 +5,7 @@ import machine.emulator.memory.Memory;
 
 public abstract class Command implements Comparable<Command> {
 	
+	//priority in program
 	private int j;
 	private int jr1;
 	private int jr2;
@@ -17,14 +18,6 @@ public abstract class Command implements Comparable<Command> {
 		this.setJr1(jr1);		
 	}
 
-	public Command(int j, int jr1, int jr2, int r1, int r2) {
-		this.j = j;
-		this.setR1(r1);
-		this.setR2(r2);
-		this.setJr1(jr1);
-		this.setJr2(jr2);
-	}
-	
 	public int compareTo(Command o) {
 	    return Integer.compare(this.j, o.j);
 	}
@@ -43,11 +36,15 @@ public abstract class Command implements Comparable<Command> {
 		this.setJr2(j2);
 	}
 
-	public int getLineNum() {
+	public int getJ() {
 		return this.j;
 	}
+	
+	public void setJ(int ln) {
+		this.j = ln;
+	}
 
-	// execute command and jump to given instruction number
+	// execute command and jump to returned instruction number
 	public abstract int execute(Memory mem) throws InvalidRegister;
 
 	public int getJr2() {

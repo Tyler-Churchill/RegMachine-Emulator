@@ -11,6 +11,7 @@ public class Console {
 	private Scanner s;
 	
 	public ArrayList<Command> getInput() throws InvalidCommand {
+		//line #
 		l = 0;
 		System.out.println("Enter your program code\nType RUN on a new line to run the program\n");
 		ArrayList<Command> cmds = new ArrayList<>();
@@ -19,8 +20,11 @@ public class Console {
 		do {
 			String cmd = s.next();
 			if (cmd.equals("HELP")) {
-				System.out.println("Commands:\nINC n r (Increments reg n, jumps to r)");
-			} else if(!cmd.equals("RUN")){
+				System.out.println("Commands:\nHALT (Stop the program execution)");
+				System.out.println("INC n r (Increments reg n, jumps to r)");
+				System.out.println("DEB n r j (if reg n > 0, decrement n and go to r, else go to j)");
+				System.out.println("(TYPE ANYTHING TO CONTINUE)");
+			} else if(!cmd.equals("RUN")) {
 					switch (getType(cmd)) {
 					case INC:
 						INC i = new INC(l, s.nextInt(), s.nextInt());
@@ -46,7 +50,7 @@ public class Console {
 	}
 	
 	public String getProgName() {
-		System.out.println("Program name: ");
+		System.out.print("Program name: ");
 		s = new Scanner(System.in);
 		String h = s.next();
 		return h;

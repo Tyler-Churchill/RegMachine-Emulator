@@ -8,6 +8,8 @@ public class Memory {
 	public Memory() {
 		this.nReg = 2;
 		registers = new int[nReg];
+		registers[0] = 4;
+		registers[1] = 1;
 	}
 	public void put(int regN, int val) {
 		try {
@@ -31,14 +33,18 @@ public class Memory {
 	}
 
 	public int get(int regN) throws InvalidRegister {
-		return registers[regN - 1];
+		try {
+			return registers[regN - 1];
+		} catch (IndexOutOfBoundsException e) {
+			throw new InvalidRegister("[ERROR] Tried getting an invalid register");
+		}
 	}
 	
 	public void set(int regN, int val) throws InvalidRegister {
 		try {
 			registers[regN - 1] = val;
 		} catch (IndexOutOfBoundsException e) {
-			throw new InvalidRegister("Tried setting an invalid register");
+			throw new InvalidRegister("[ERROR] Tried setting an invalid register");
 		}
 	}
 	
@@ -47,8 +53,18 @@ public class Memory {
 	}
 	
 	public void printState() {
-		for(int x = 0; x < registers.length; x++)
-			System.out.println("Reg" + (x + 1) +"\t Value: " + registers[x] + "\n");
+		for(int y = 0; y < registers.length; y++) {
+			System.out.print(registers[y] + "\t\t");
+			if(y % registers.length - 1 == 0)
+				System.out.print("\n");
+		}
+	}
+	public void printRegNames() {
+		for(int x = 0; x < registers.length; x++) {
+			System.out.print("Reg" + (x + 1) + "\t\t");
+			if(x % registers.length - 1 == 0)
+				System.out.print("\n");
+		}
 	}
 	
 }
