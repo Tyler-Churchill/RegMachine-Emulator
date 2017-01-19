@@ -50,15 +50,14 @@ Type RUN on a new line to run the program
 ###The machine will display its states as it runs the given program
 
 ```
-|   Reg1    |    Reg2   |
-|-----------------------|
-|     4     |     1     |
-|     3     |     1     |
-|     3     |     2     |
-|     2     |     2     |
-|     2     |     3     |
-|     1     |     3     |
-|     1     |     4     |
-|     0     |     4     |
-|     0     |     5     |
+Reg1    Reg2
+4       1
+3       1
+3       2
+2       2
+2       3
+1       3
+1       4
+0       4
+0       5
 ```
