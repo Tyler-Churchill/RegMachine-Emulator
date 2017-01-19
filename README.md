@@ -37,6 +37,7 @@ You are presented a console to the emulator which can execute and run programs y
 
 ###Basic ADD program:
 
+R1 = 4, R2 = 1  // Adds R1 to R2 and stores it in R2
 ```
 Enter your program code
 Type RUN on a new line to run the program
