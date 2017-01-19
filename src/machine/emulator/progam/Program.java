@@ -11,6 +11,7 @@ public class Program {
 
 	private int j = 1;
 	private String name;
+	// priority queue not currently used
 	private PriorityQueue<Command> prog;
 	private ArrayList<Command> programCommands;
 
@@ -49,7 +50,7 @@ public class Program {
 				mem.printState();
 			}
 		} catch (InvalidRegister e) {
-			System.out.println("[ERROR] " + e.getMessage());
+			System.out.println(e.getMessage());
 		}
 		
 		/**while (this.j != 0 && prog.size() != 0 && prog.peek() != null) {

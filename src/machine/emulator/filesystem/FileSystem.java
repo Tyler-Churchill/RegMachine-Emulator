@@ -5,7 +5,7 @@ import java.io.FilenameFilter;
 
 public class FileSystem {
 	private File[] files;
-	private String fileLoc = "/programs/";
+	private String fileLoc = "../programs/";
 
 	public FileSystem() {
 		refreshFileList();

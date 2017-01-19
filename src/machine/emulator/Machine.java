@@ -7,7 +7,6 @@ import machine.emulator.memory.Memory;
 import machine.emulator.progam.Program;
 
 public class Machine {
-
 	private FileSystem fs;
 	private Memory mem;
 	private Console console;
@@ -19,8 +18,7 @@ public class Machine {
 		this.console = new Console();
 		running = true;
 	}
-	// eucledian al
-	// /2 and there is remainder
+	
 	public void start() {
 		while (running) {
 			try {
@@ -46,5 +44,4 @@ public class Machine {
 		Machine m = new Machine();
 		m.start();
 	}
-
 }

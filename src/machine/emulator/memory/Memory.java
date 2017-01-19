@@ -6,10 +6,10 @@ public class Memory {
 	private int nReg;
 
 	public Memory() {
-		this.nReg = 2;
+		this.nReg = 4;
 		registers = new int[nReg];
-		registers[0] = 4;
-		registers[1] = 1;
+		registers[0] = 3;
+		registers[1] = 3;
 	}
 	public void put(int regN, int val) {
 		try {
@@ -53,18 +53,13 @@ public class Memory {
 	}
 	
 	public void printState() {
-		for(int y = 0; y < registers.length; y++) {
-			System.out.print(registers[y] + "\t\t");
-			if(y % registers.length - 1 == 0)
-				System.out.print("\n");
-		}
+		for(int y = 0; y < registers.length; y++) 
+			System.out.print(registers[y] + "\t");
+		System.out.print("\n");
 	}
 	public void printRegNames() {
-		for(int x = 0; x < registers.length; x++) {
-			System.out.print("Reg" + (x + 1) + "\t\t");
-			if(x % registers.length - 1 == 0)
-				System.out.print("\n");
-		}
+		for(int x = 0; x < registers.length; x++) 
+			System.out.print("Reg" + (x + 1) + "\t");
+		System.out.println("\n");
 	}
-	
 }

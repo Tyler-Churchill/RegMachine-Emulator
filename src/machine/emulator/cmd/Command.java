@@ -5,7 +5,6 @@ import machine.emulator.memory.Memory;
 
 public abstract class Command implements Comparable<Command> {
 	
-	//priority in program
 	private int j;
 	private int jr1;
 	private int jr2;
