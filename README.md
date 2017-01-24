@@ -8,8 +8,6 @@ This program emulates a register machine which enables you to write programs ins
 
 ## How to Install/Run
 
-(compiled jar will be available once project is feature complete)
-
 1. Install JDK/JRE
 2. Open project files in your favourite java IDE/dev environment
 3. Build and run the project to begin programming inside the emulator
@@ -26,7 +24,7 @@ HALT
 INC r n
 ```
 
-###**DEB**: If value r is > 0, decrement register r and move to instruction number n, else move to instruction number x
+###**DEB**: If value r is > 0, decrement contents of register r and move to instruction number n, else move to instruction number x
 
 ```
 DEB r n x
