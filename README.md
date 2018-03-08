@@ -46,7 +46,7 @@ Type RUN on a new line to run the program
 4     RUN
 
 ```
-###The machine will display its states as it runs the given program
+###The machine will display its memory state at each iteration as it runs the given program
 
 ```
 Reg1    Reg2
