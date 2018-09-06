@@ -1,8 +1,3 @@
-# 3740 Programming Languages
-## Spring 2017, University of Lethbridge
-### Tyler Churchill
-
-## About
 
 This program emulates a register machine which enables the writing and executing of programs
 
